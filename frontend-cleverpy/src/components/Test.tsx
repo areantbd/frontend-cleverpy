@@ -1,14 +1,15 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import axios from "axios";
 
+interface Post {
+  id: number,
+  userId: number,
+  title: string,
+  body: string
+}
+
 export default function Test() {
-  type Posts = {
-    id: number,
-    userId: number,
-    title: string,
-    body: string
-  }
-  const [posts, setPosts] = useState(null)
+  const [posts, setPosts] = useState<Array<Post>>()
 
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/posts")
@@ -19,11 +20,11 @@ export default function Test() {
   return (
     <>
       {posts?.map((post) => (
-        <>
+        <div className='' key={post.id}>
           <h3>{post.userId}: {post.title}</h3>
           <hr />
           <h4>{post.body}</h4>
-        </>
+        </div>
       ))}
     </>
   )
