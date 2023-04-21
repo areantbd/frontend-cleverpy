@@ -1,11 +1,11 @@
 import './App.css'
-import Test from './components/Test'
+import { PostsScreen } from './screens/PostsScreen'
 
 function App() {
 
   return (
     <>
-      <Test />
+      <PostsScreen />
     </>
   )
 }
