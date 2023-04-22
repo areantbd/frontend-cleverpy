@@ -11,6 +11,14 @@ interface Post {
 
 export const PostsScreen = () => {
   const [posts, setPosts] = useState<Array<Post>>()
+  // const [filteredPosts, setFilteredPosts] = useState<Array<Post>>()
+  
+  
+  const handleDeletePost = (id: number) => {
+    setPosts(posts?.filter(post => post.id !== id))    
+  }
+
+  console.log(posts)
 
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/posts")
@@ -19,10 +27,14 @@ export const PostsScreen = () => {
   }, [])
 
   return (
-    <div className="container d-flex gap-3 flex-wrap mt-5">
+    <div className="container d-flex gap-3 flex-wrap mt-5">      
       {posts?.map((post) => (
-        <Card {...post} key={post.id}/>
-      ))}
+        <div className="post-card-container"  key={post.id} >
+          <button onClick={() => handleDeletePost(post.id)} className="btn btn-sm btn-outline-danger delete-button">X</button>
+          <Card {...post}/>
+        </div>
+      ))}  
     </div>
   )
 }
+// onDelete={handleDeletePost(id)
