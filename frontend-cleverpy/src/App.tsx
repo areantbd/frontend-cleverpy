@@ -1,4 +1,3 @@
-import './App.css'
 import { PostsScreen } from './screens/PostsScreen'
 
 function App() {
