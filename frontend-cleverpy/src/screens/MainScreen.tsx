@@ -10,6 +10,7 @@ function MainScreen() {
       <ul>
         <li>El código ha sido desarrollado en Visual Studio Code, usando React con Vite y TypeScript.</li>
         <li>He usado por primera vez tanto Vite como TypeScript.</li>
+        <li>He utilizado también por primera vez un flujo de trabajo, con ramas y merges.</li>
         <li>Para estilos he usado SASS compaginado con Bootstrap para el layout y algunos colores.</li>
         <li>Componentes 100% creados por mi.</li>
         <li>Uso de Hooks (useState, useEffect, useContext).</li>
