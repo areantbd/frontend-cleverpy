@@ -7,25 +7,13 @@ function Login() {
   const [type, setType] = React.useState("password")
   const navigate = useNavigate()
   const user = React.useContext(UserContext)
-  let test  = ""
-
-
-  console.log("pitiflin", test)
+  let username = ""
+  let password = ""
 
   function setUserAndGoToPosts(): void {
-    user.logIn({username: test, password: "password"})
+    user.logIn({username: username, password: password})
     navigate('/posts')
   }
-
-  // const userNAme = 
-
-  // // function setUserAndGoToPosts(event) {
-  // //   alert("hey")
-  // //   event.preventDefault()
-  // //   user.setUser("manolito")
-  // //   navigate('/posts')    
-  // // }
-
 
   return (
     <div className="container mt-5" style={{height: 500}}>
@@ -33,10 +21,10 @@ function Login() {
         <form onSubmit={() => setUserAndGoToPosts()}>
           <div className="input-group">
             <span className="input-group-text"><i className="fa fa-user fa-fw"></i></span>
-            <input type="text" onChange={() => {test = event?.target?.value}} placeholder="username" id="username" className="form-control"/>
+            <input type="text" onChange={() => {username = event?.target?.value}} placeholder="username" id="username" className="form-control"/>
           </div><div className="input-group">
             <span className="input-group-text"><i className="fa fa-key fa-fw"></i></span>
-            <input type={type} placeholder="password" id="password" className="form-control"/>
+            <input type={type} onChange={() => {password = event?.target?.value}} placeholder="password" id="password" className="form-control"/>
             <span className="input-group-text"><i className="fa fa-eye fa-fw" onClick={() => type === "password" ? setType("text") : setType("password")}></i></span>
           </div>
           <button className="btn btn-primary mt-2" type="submit" >Login</button>

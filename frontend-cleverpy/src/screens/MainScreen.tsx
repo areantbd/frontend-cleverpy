@@ -21,6 +21,8 @@ function MainScreen() {
         <li>Tarjetas eliminables.</li>
         <li>Mensaje si no hay tarjetas.</li>
         <li>Pantalla de Login</li>
+        <li>Falso Login para el uso del Context</li>
+        <li></li>
         <li></li>
       </ul>
       <Link to={'/posts'} className="btn btn-primary btn-sm d-inline" style={{maxWidth: 200}} >Posts</Link>

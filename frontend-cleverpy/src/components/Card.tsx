@@ -12,7 +12,6 @@ export const Card = (props: Post) => {
       <h4 className="text-decoration-underline text-center mt-5">{props.title}</h4>
       <p className="mt-3 text-center text-truncate" contentEditable suppressContentEditableWarning={true}>{props.body}</p>
         <small className="d-block text-end mb-2 fw-lighter mt-auto ms-auto" >Created by user: {props.userId}</small>
-      {/* <button className="btn btn-sm btn-outline-secondary">Edit post</button> */}      
     </div>
   )
 }
