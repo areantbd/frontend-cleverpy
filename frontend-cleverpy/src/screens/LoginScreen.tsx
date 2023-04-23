@@ -1,12 +1,22 @@
 import * as React from "react"
-import { useNavigate } from "react-router-dom"
+import { JsonFunction, useNavigate } from "react-router-dom"
 import { UserContext } from "../components/contexts/UserContext"
 
+type User = {
+  user: {
+    username: string,
+    password: string,
+  },
+  logIn: JsonFunction
+  username: string,
+  password: string,
+  
+}
 
 function Login() {
   const [type, setType] = React.useState("password")
   const navigate = useNavigate()
-  const user = React.useContext(UserContext)
+  const user = React.useContext(UserContext) as User
   let username = ""
   let password = ""
 
