@@ -6,7 +6,7 @@ function Navbar() {
       <Link to={'/'} className="text-decoration-none text-dark"><h1 className="ms-3">Prueba técnica Cleverpy</h1></Link>
       <div className="d-flex ms-auto me-3 align-items-center gap-2">
         <span className="fa fa-user fa-lg"></span>
-        <h5 className="m-0">LOGIN</h5>
+        <Link to={'login'}><h5 className="m-0">LOGIN</h5></Link>
         {/* <h3></h3> */}
       </div>
     </div>

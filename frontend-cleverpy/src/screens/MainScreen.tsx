@@ -4,6 +4,9 @@ function MainScreen() {
   return (
     <div className="container mt-3">
       <h3>Prueba técnica desarrollada por <a className="text-dark" href="https://github.com/areantbd" target="_blank">Iván Rodríguez</a> para el proceso selectivo de un desarrollador front-end con React y TypeScript en <a className="text-dark" href="https://cleverpy.com/" target="_blank">Cleverpy</a></h3>
+      <br />
+      <h4>Tecnologías utilizadas y funcionalidades implementadas:</h4>
+      <hr />
       <ul>
         <li>El código ha sido desarrollado en Visual Studio Code, usando React con Vite y TypeScript.</li>
         <li>He usado por primera vez tanto Vite como TypeScript.</li>
