@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function MainScreen() {
   return (
-    <div className="container mt-3">
+    <div className="container mt-3 d-flex flex-column">
       <h3>Prueba técnica desarrollada por <a className="text-dark" href="https://github.com/areantbd" target="_blank">Iván Rodríguez</a> para el proceso selectivo de un desarrollador front-end con React y TypeScript en <a className="text-dark" href="https://cleverpy.com/" target="_blank">Cleverpy</a></h3>
       <br />
       <h4>Tecnologías utilizadas y funcionalidades implementadas:</h4>
@@ -23,7 +23,8 @@ function MainScreen() {
         <li>Pantalla de Login</li>
         <li></li>
       </ul>
-      <Link to={'/posts'} className="btn btn-primary">Posts</Link>
+      <Link to={'/posts'} className="btn btn-primary btn-sm d-inline" style={{maxWidth: 200}} >Posts</Link>
+      <small className="d-block text-end mb-2 fw-lighter mt-3 ms-auto" >"From experience, I can tell you, you miss 100% of the shots you don't take"</small>
     </div>
   )
 }
