@@ -7,13 +7,14 @@ function Login() {
   const [type, setType] = React.useState("password")
   const navigate = useNavigate()
   const user = React.useContext(UserContext)
+  let test  = ""
 
-  console.log("pitiflin", user)
+
+  console.log("pitiflin", test)
 
   function setUserAndGoToPosts(): void {
-    user.logIn({username: "manolito", password: "password"})
-    alert()
-    navigate('/')
+    user.logIn({username: test, password: "password"})
+    navigate('/posts')
   }
 
   // const userNAme = 
@@ -32,7 +33,7 @@ function Login() {
         <form onSubmit={() => setUserAndGoToPosts()}>
           <div className="input-group">
             <span className="input-group-text"><i className="fa fa-user fa-fw"></i></span>
-            <input type="text" placeholder="username" className="form-control"/>
+            <input type="text" onChange={() => {test = event?.target?.value}} placeholder="username" id="username" className="form-control"/>
           </div><div className="input-group">
             <span className="input-group-text"><i className="fa fa-key fa-fw"></i></span>
             <input type={type} placeholder="password" id="password" className="form-control"/>

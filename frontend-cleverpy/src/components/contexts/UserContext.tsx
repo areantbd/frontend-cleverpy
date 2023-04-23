@@ -1,4 +1,4 @@
-import { SetStateAction, createContext, useEffect, useState} from "react"
+import { SetStateAction, createContext, useState} from "react"
 import { useNavigate } from "react-router-dom"
 
 export const UserContext = createContext({})
