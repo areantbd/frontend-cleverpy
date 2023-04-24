@@ -23,13 +23,15 @@ export const PostsScreen = () => {
   }, [])
 
   return posts && posts.length > 1? (
-    <div className="container d-flex gap-3 flex-wrap mt-3">      
-      {posts?.map((post) => (
-        <div className="post-card-container"  key={post.id} >
-          <button onClick={() => handleDeletePost(post.id)} className="btn btn-sm btn-outline-danger delete-button">X</button>
-          <Card {...post}/>
-        </div>
-      ))}  
+    <div className="nav-shadow mt-1">
+      <div className="container d-flex gap-3 flex-wrap pt-3">
+        {posts?.map((post) => (
+          <div className="post-card-container"  key={post.id} >
+            <button onClick={() => handleDeletePost(post.id)} className="btn btn-sm btn-outline-danger delete-button">X</button>
+            <Card {...post}/>
+          </div>
+        ))}  
+      </div>
     </div>
   ) : (
     <div className="nothing-to-see">

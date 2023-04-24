@@ -1,6 +1,11 @@
+//font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 //general settings
 @import "./base//settings";
 
 //component settings
 @import "./components/_postCard.scss";
 @import "./components/_navbar.scss";
+@import "./components/_loginScreen.scss";
+@import "./components/_mainScreen.scss";
