@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Card } from "../components/Card"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 interface Post {
   id: number,
@@ -13,7 +14,9 @@ export const PostsScreen = () => {
   const [posts, setPosts] = useState<Array<Post>>()
   
   const handleDeletePost = (id: number) => {
-    setPosts(posts?.filter(post => post.id !== id))    
+    setPosts(posts?.filter(post => post.id !== id))  
+    //Petición para eliminar un post de la base de datos podría ser algo tipo: 
+    //axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)  
   }
 
   useEffect(() => {
@@ -24,6 +27,10 @@ export const PostsScreen = () => {
 
   return posts && posts.length > 1? (
     <div className="nav-shadow mt-1">
+      <ul className="ms-5 d-flex text-light gap-2 list-unstyled">
+        <Link to={'/'} className="text-decoration-none breadcrumbs"><li>Home <i className="fa fa-arrow-right"></i></li></Link>
+        <li className="text-secondary">Posts</li>
+      </ul>
       <div className="container d-flex gap-3 flex-wrap pt-3">
         {posts?.map((post) => (
           <div className="post-card-container"  key={post.id} >
