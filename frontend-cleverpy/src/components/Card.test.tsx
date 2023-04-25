@@ -5,11 +5,7 @@ import { Card } from "./Card"
 describe("Card", () => {
   beforeEach(() => {
     render(
-      <Card userId={0} title={"Título de la tarjeta"} body={"Cuerpo de la tarjeta"} >
-        <h4></h4>
-        <p></p>
-        <small></small>
-      </Card>
+      <Card userId={0} title={"Título de la tarjeta"} body={"Cuerpo de la tarjeta"} />
     )
   })
 
