@@ -21,9 +21,9 @@ function MainScreen() {
           <li>Texto editable.</li>
           <li>Tarjetas eliminables.</li>
           <li>Mensaje si no hay tarjetas.</li>
-          <li>Pantalla de Login</li>
-          <li>Falso Login con formulario para el uso del Context</li>
-          <li></li>
+          <li>Pantalla de Login.</li>
+          <li>Falso Login con formulario para el uso del Context.</li>
+          <li>Test simple con Vitest, primera vez creando tests.</li>
           <li></li>
         </ul>
         <Link to={'/posts'} className="btn btn-sm d-inline button" style={{maxWidth: 200}} >Posts</Link>
