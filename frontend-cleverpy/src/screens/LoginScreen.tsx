@@ -1,5 +1,5 @@
 import * as React from "react"
-import { JsonFunction, useNavigate } from "react-router-dom"
+import { JsonFunction, Link, useNavigate } from "react-router-dom"
 import { UserContext } from "../components/contexts/UserContext"
 
 type User = {
@@ -27,6 +27,10 @@ function Login() {
 
   return (
     <div className="nav-shadow mt-1" style={{height: 650}}>
+      <ul className="ms-5 d-flex text-light gap-2 list-unstyled">
+        <Link to={'/'} className="text-decoration-none breadcrumbs"><li>Home <i className="fa fa-arrow-right"></i></li></Link>
+        <li className="text-secondary">Login</li>
+      </ul>
       <div className="d-flex flex-column w-50 mx-auto p-3 pt-5 input-group-text gap-2 login-form border border-0">
         <form onSubmit={() => setUserAndGoToPosts()} className="d-flex flex-column gap-2">
           <div className="input-group">
