@@ -6,7 +6,7 @@ function MainScreen() {
       <div className="container mt-3">        
         <h3>Prueba técnica desarrollada por <a className="text-light" href="https://github.com/areantbd" target="_blank">Iván Rodríguez</a> para el proceso selectivo de un desarrollador front-end con React y TypeScript en <a className="text-light" href="https://cleverpy.com/" target="_blank">Cleverpy</a></h3>
         <br />
-        <h4>Tecnologías utilizadas y funcionalidades implementadas:</h4>
+        <h4 className="mt-3"><b>TECNOLOGÍAS UTILIZADAS Y FUNCIONALIDADES IPLEMENTADAS:</b></h4>
         <hr />
         <ul >
           <li>El código ha sido desarrollado en Visual Studio Code, usando React con Vite y TypeScript.</li>
@@ -27,7 +27,7 @@ function MainScreen() {
           <li>Breadcrumbs.</li>
         </ul>
         <Link to={'/posts'} className="btn btn-sm d-inline button" style={{maxWidth: 200}} >POSTS</Link>
-        <small className="d-block text-end mb-2 fw-lighter mt-3 ms-auto quote" >"From experience, I can tell you, you miss 100% of the shots you don't take"</small>
+        <small className="d-block text-end mb-2 fw-lighter mt-4 ms-auto quote" >"From experience, I can tell you, you miss 100% of the shots you don't take"</small>
       </div>
     </div>
   )
