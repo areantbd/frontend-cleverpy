@@ -26,7 +26,7 @@ function MainScreen() {
           <li>Test simple con Vitest, primera vez creando tests.</li>
           <li>Breadcrumbs.</li>
         </ul>
-        <Link to={'/posts'} className="btn btn-sm d-inline button" style={{maxWidth: 200}} >Posts</Link>
+        <Link to={'/posts'} className="btn btn-sm d-inline button" style={{maxWidth: 200}} >POSTS</Link>
         <small className="d-block text-end mb-2 fw-lighter mt-3 ms-auto quote" >"From experience, I can tell you, you miss 100% of the shots you don't take"</small>
       </div>
     </div>

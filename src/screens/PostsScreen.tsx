@@ -31,7 +31,7 @@ export const PostsScreen = () => {
         <Link to={'/'} className="text-decoration-none breadcrumbs"><li>Home <i className="fa fa-arrow-right"></i></li></Link>
         <li className="text-secondary">Posts</li>
       </ul>
-      <div className="container d-flex gap-3 flex-wrap pt-3">
+      <div className="container me-0 d-flex gap-3 flex-wrap pt-3">
         {posts?.map((post) => (
           <div className="post-card-container"  key={post.id} >
             <button onClick={() => handleDeletePost(post.id)} className="btn btn-sm btn-outline-danger delete-button">X</button>
